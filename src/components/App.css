@@ -1,38 +1,85 @@
 .App {
-  text-align: center;
+  margin: 0;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  background: url(../../family.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login {
+  padding: 1em;
+  height: 100;
+  width: 25%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 5px green solid;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 45%;
 }
 
-.App-link {
-  color: #61dafb;
+.login-form > h1 {
+  font-size: 58px;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.login-form > label {
+  font-size: 25px;
+}
+
+.login-form > input {
+  height: 2em;
+  width: 100%;
+  padding: 5px;
+  font-size: 15px;
+  margin: 1em;
+}
+
+.login-form > button {
+  margin-top: 1em;
+  width: 25%;
+  height: 2em;
+  cursor: pointer;
+}
+
+@media (max-width: 390px) {
+  .App {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: url(../../family.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  to {
-    transform: rotate(360deg);
+
+  .login {
+    padding: 1em;
+    height: 50%;
+    width: 100%;
+    align-self: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 5px green solid;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -2%;
   }
 }
