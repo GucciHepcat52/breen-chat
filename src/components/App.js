@@ -1,18 +1,15 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Login from "./login/Login";
+import CreateAccount from "./login/CreateAccount";
 
 function App() {
   return (
     <div className="App">
-      <div className="login">
-        <form className="login-form">
-          <h1>Breen Chat</h1>
-          <label>Enter Username:</label>
-          <input type="text" id="username" />
-          <label>Enter Password:</label>
-          <input type="password" id="password" />
-          <button>SUBMIT</button>
-        </form>
-      </div>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/create-account" element={<CreateAccount />} />
+      </Routes>
     </div>
   );
 }
