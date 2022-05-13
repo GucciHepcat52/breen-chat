@@ -54,6 +54,14 @@
   cursor: pointer;
 }
 
+.home-page {
+  position: relative;
+  width: 100%;
+  background: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/ea/fc/f0/photo2jpg.jpg?w=1200&h=-1&s=1);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media (max-width: 390px) {
   .App {
     box-sizing: border-box;
@@ -62,6 +70,15 @@
     height: 100vh;
     width: 100%;
     background: url(../../family.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .home-page {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    background: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/ea/fc/f0/photo2jpg.jpg?w=1200&h=-1&s=1);
     background-repeat: no-repeat;
     background-size: cover;
   }
