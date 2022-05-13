@@ -1,10 +1,13 @@
 import React from "react";
 import "../App.css";
+import Messages from "./message-box/Messages";
+import Profile from "./user-info/Profile";
 
 export default function Home() {
     return (
         <div className="home-page">
-            <h1>Home Page</h1>
+            <Profile />
+            <Messages />
         </div>
     )
 }
