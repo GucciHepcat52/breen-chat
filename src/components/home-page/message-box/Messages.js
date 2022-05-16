@@ -1,11 +1,11 @@
 import React from "react";
 import "../../App.css";
-import Profile from "../user-info/Profile";
+import Input from './Input';
 
 export default function Messages() {
   return (
     <div className="message-box">
-      <Profile />
+      <Input />
       <h1>Hello World</h1>
     </div>
   );

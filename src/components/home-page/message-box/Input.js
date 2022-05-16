@@ -1,14 +1,13 @@
 import React from "react";
 import "../../App.css";
+import Profile from "./Profile";
 
-export default function Profile() {
+export default function Input() {
   return (
     <div className="input-bar">
       <div className="dropdown">
-          <h2>{"|->"}</h2>
-          <div className="profile">
-              <p>Hello World</p>
-          </div>
+        <p>{"|->"}</p>
+        <Profile />
       </div>
     </div>
   );
