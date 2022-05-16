@@ -9,6 +9,12 @@ export default function Input() {
         <p>{"|->"}</p>
         <Profile />
       </div>
+      <input
+        type="text"
+        placeholder="Enter your text here"
+        className="message-input"
+      />
+      <button className="message-enter">Enter</button>
     </div>
   );
 }

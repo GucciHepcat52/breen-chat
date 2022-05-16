@@ -123,6 +123,22 @@
   display: block;
 }
 
+.message-input {
+  height: 2em;
+  width: 95vw;
+  margin: 1em;
+  border-radius: 0.2em;
+  box-shadow: 2px 2px #888888;
+}
+
+.message-enter {
+  height: 2.5em;
+  background-color: lightgreen;
+  border-radius: 0.2em;
+  cursor: pointer;
+  box-shadow: 2px 2px #888888;
+}
+
 @media (max-width: 390px) {
   .App {
     box-sizing: border-box;
@@ -172,5 +188,18 @@
     padding: 2px;
     font-size: 12px;
     margin: 1em;
+  }
+
+  .dropdown > p {
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .message-input {
+    height: 2em;
+    width: 70%;
+    margin: 1em;
+    border-radius: 0.2em;
+    box-shadow: 2px 2px #888888;
   }
 }
