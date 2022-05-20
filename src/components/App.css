@@ -58,25 +58,30 @@
   position: relative;
   display: flex;
   width: 100%;
-  background: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/ea/fc/f0/photo2jpg.jpg?w=1200&h=-1&s=1);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .message-box {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 3em;
+  display: table;
   width: 100%;
-  background-color: grey;
-  opacity: 85%;
+  background: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/ea/fc/f0/photo2jpg.jpg?w=1200&h=-1&s=1);
+  background-repeat: repeat;
+  background-size: 100vw 100vh;
+  background-blend-mode: multiply;
+  background-color: rgb(141, 141, 141);
 }
 
 .input-bar {
   box-sizing: border-box;
   position: fixed;
   bottom: 0;
+  left: 0;
   padding: 1em;
   height: 4em;
   width: 100%;
@@ -103,7 +108,7 @@
 }
 
 .dropdown > p {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 800;
 }
 
@@ -137,6 +142,31 @@
   border-radius: 0.2em;
   cursor: pointer;
   box-shadow: 2px 2px #888888;
+}
+
+.message-fam {
+  height: 8vh;
+  width: 35vw;
+  background-color: white;
+  border-radius: 1em;
+  border: 1px black solid;
+  box-shadow: 4px 4px yellow;
+  margin-bottom: 2em;
+  flex-direction: row;
+}
+
+.message-self {
+  height: 8vh;
+  width: 35vw;
+  margin-right: 0px;
+  margin-left: auto;
+  background-color: white;
+  border-radius: 1em;
+  border: 1px black solid;
+  box-shadow: 4px 4px green;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: row;
 }
 
 @media (max-width: 390px) {
@@ -201,5 +231,29 @@
     margin: 1em;
     border-radius: 0.2em;
     box-shadow: 2px 2px #888888;
+  }
+
+  .message-fam {
+    height: 8vh;
+    width: 50vw;
+    background-color: white;
+    border-radius: 1em;
+    border: 1px black solid;
+    box-shadow: 4px 4px yellow;
+    margin-bottom: 2em;
+    flex-direction: row;
+  }
+
+  .message-self {
+    height: 8vh;
+    width: 50vw;
+    align-self: flex-end;
+    background-color: white;
+    border-radius: 1em;
+    border: 1px black solid;
+    box-shadow: 4px 4px green;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
   }
 }
