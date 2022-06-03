@@ -1,21 +1,21 @@
 import React from "react";
 import "../App.css";
-import { Link } from "react-router-dom";
 
-export default function Login() {
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
+import "firebase/compat/auth";
+
+export default function Login(props) {
+
+  function signInWithGoogle() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    props.authentication.signInWithPopup(provider);
+  }
+
   return (
     <div className="login">
-      <form className="login-form">
-        <h1>Breen Chat</h1>
-        <label>Enter Username:</label>
-        <input type="text" id="username" />
-        <label>Enter Password:</label>
-        <input type="password" id="password" />
-        <Link to="/home">
-          <button>SUBMIT</button>
-        </Link>
-      </form>
-      <Link to="/create-account">Create Account Here</Link>
+      <h1>Breen Chat</h1>
+      <button onClick={signInWithGoogle}>Login with Google</button>
     </div>
   );
 }

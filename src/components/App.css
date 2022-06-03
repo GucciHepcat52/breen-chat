@@ -1,295 +1,149 @@
+body {
+  background-color: #282c34;
+}
+
 .App {
-  margin: 0;
-  box-sizing: border-box;
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
+  text-align: center;
+  max-width: 728px;
+  margin: 0 auto;
+}
+
+.App header {
+  background-color: #181717;
+  height: 10vh;
+  min-height: 50px;
+  color: white;
+  position: fixed;
   width: 100%;
-  background: url(../../family.JPG);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.login {
-  padding: 1em;
-  height: 100;
-  width: 25%;
-  background-color: white;
+  max-width: 728px;
+  top: 0;
   display: flex;
-  flex-direction: column;
-  border: 5px green solid;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-top: 45%;
-  margin-bottom: 2em;
+  justify-content: space-between;
+  z-index: 99;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.login-form > h1 {
-  font-size: 58px;
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-.login-form > label {
-  font-size: 25px;
-}
-
-.login-form > input {
-  height: 2em;
-  width: 100%;
-  padding: 5px;
-  font-size: 15px;
-  margin: 1em;
-}
-
-.login-form > button {
-  margin-top: 1em;
-  width: 25%;
-  height: 2em;
-  cursor: pointer;
-}
-
-.home-page {
-  position: relative;
+.App section {
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(40, 37, 53);
 }
 
-.message-box {
-  box-sizing: border-box;
-  overflow: hidden;
-  position: relative;
-  padding-left: 1em;
-  padding-top: 1em;
-  padding-right: 1em;
-  padding-bottom: 3em;
-  display: table;
-  width: 100%;
-  background: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/ea/fc/f0/photo2jpg.jpg?w=1200&h=-1&s=1);
-  background-repeat: repeat;
-  background-size: 100vw 100vh;
-  background-blend-mode: multiply;
-  background-color: rgb(141, 141, 141);
+main {
+  padding: 10px;
+  height: 80vh;
+  margin: 10vh 0 10vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
-.input-bar {
-  box-sizing: border-box;
+main::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+main::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+form {
+  height: 10vh;
   position: fixed;
   bottom: 0;
-  left: 0;
-  padding: 1em;
-  height: 4em;
+  background-color: rgb(24, 23, 23);
   width: 100%;
+  max-width: 728px;
   display: flex;
-  flex-direction: row;
-  background-color: white;
-  opacity: 85%;
-  align-items: center;
+  font-size: 1.5rem;
 }
 
-.dropdown {
-  box-sizing: border-box;
-  height: 2em;
-  width: 2em;
-  padding: 3px;
+form button {
+  width: 20%;
+  background-color: rgb(56, 56, 143);
+}
+
+input {
+  line-height: 1.5;
+  width: 100%;
+  font-size: 1.5rem;
+  background: rgb(58, 58, 58);
+  color: white;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+}
+
+button {
+  background-color: #282c34; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sign-in {
+  color: #282c34;
+  background: white;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+ul,
+li {
+  text-align: left;
+  list-style: none;
+}
+
+p {
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
   position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  cursor: pointer;
-  border: 1px black solid;
-  border-radius: 0.2em;
-  box-shadow: 2px 2px #888888;
-}
-
-.dropdown > p {
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.profile {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 100vh;
-  width: 350px;
-  background-color: lightyellow;
-  border-radius: 0em 1em 1em 0em;
-  border: 2px solid black;
-}
-
-.dropdown:hover .profile {
-  display: block;
-}
-
-.message-input {
-  height: 2em;
-  width: 95vw;
-  margin: 1em;
-  border-radius: 0.2em;
-  box-shadow: 2px 2px #888888;
-}
-
-.message-enter {
-  height: 2.5em;
-  background-color: lightgreen;
-  border-radius: 0.2em;
-  cursor: pointer;
-  box-shadow: 2px 2px #888888;
-}
-
-.message-info {
-  display: flex;
-  flex-direction: column;
-  margin-right: 1em;
+  color: white;
+  text-align: center;
 }
 
 .message {
   display: flex;
-  flex-direction: column;
-  border-bottom: 2px solid black;
+  align-items: center;
 }
 
-.edit {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.sent {
+  flex-direction: row-reverse;
 }
 
-.edit > button {
-  height: 2em;
-  cursor: pointer;
+.sent p {
+  color: white;
+  background: #0b93f6;
   align-self: flex-end;
-  margin-bottom: 1em;
+}
+.received p {
+  background: #e5e5ea;
+  color: black;
 }
 
-.message-img {
-  height: 60px;
-  width: 60px;
-  border-radius: 1em;
-}
-
-.message-fam {
-  width: 35vw;
-  background-color: white;
-  border-radius: 1em;
-  border: 1px black solid;
-  box-shadow: 4px 4px yellow;
-  margin-bottom: 2em;
-  display: flex;
-  flex-direction: row;
-  padding: 0.5em;
-}
-
-.message-self {
-  width: 35vw;
-  margin-right: 0px;
-  margin-left: auto;
-  background-color: white;
-  border-radius: 1em;
-  border: 1px black solid;
-  box-shadow: 4px 4px green;
-  margin-bottom: 2em;
-  display: flex;
-  flex-direction: row;
-  padding: 0.5em;
-}
-
-@media (max-width: 390px) {
-  .App {
-    box-sizing: border-box;
-    position: absolute;
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    background: url(../../family.JPG);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .home-page {
-    box-sizing: border-box;
-    position: relative;
-    width: 100%;
-    background: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/ea/fc/f0/photo2jpg.jpg?w=1200&h=-1&s=1);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .login {
-    padding: 1em;
-    height: 50%;
-    width: 100%;
-    align-self: center;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    border: 5px green solid;
-  }
-
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -2%;
-  }
-
-  .login-form > label {
-    font-size: 15px;
-  }
-
-  .login-form > input {
-    height: 1.5em;
-    width: 100%;
-    padding: 2px;
-    font-size: 12px;
-    margin: 1em;
-  }
-
-  .dropdown > p {
-    font-size: 15px;
-    font-weight: 800;
-  }
-
-  .message-input {
-    height: 2em;
-    width: 70%;
-    margin: 1em;
-    border-radius: 0.2em;
-    box-shadow: 2px 2px #888888;
-  }
-
-  .message-fam {
-    width: 50vw;
-    background-color: white;
-    border-radius: 1em;
-    border: 1px black solid;
-    box-shadow: 4px 4px yellow;
-    margin-bottom: 2em;
-    flex-direction: row;
-  }
-
-  .message-self {
-    width: 50vw;
-    align-self: flex-end;
-    background-color: white;
-    border-radius: 1em;
-    border: 1px black solid;
-    box-shadow: 4px 4px green;
-    margin-bottom: 2em;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .message-img {
-    height: 40px;
-    width: 40px;
-    border-radius: 1em;
-  }
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
 }
