@@ -62,7 +62,7 @@ function ChatRoom() {
 
     await messagesRef.add({
       text: formValue,
-      createAt: firebase.firestore.FieldValue.serverTimestamp(),
+      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       uid,
       photoURL,
     });
